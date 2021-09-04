@@ -3,6 +3,12 @@
 Created with CodeSandbox
 All environment provided by CodeSandbox
 
+Deployed to:
+https://csb-oobr7.netlify.app/
+
+Also available to view on:
+https://codesandbox.io/s/ancient-cookies-oobr7
+
 UI Framework:
 Built using ReactJs
 
