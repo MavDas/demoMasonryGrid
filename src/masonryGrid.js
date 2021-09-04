@@ -10,6 +10,7 @@ const MasonryGrid = (props) => {
     columnWrapper[`column_${i}`] = [];
   }
 
+  // create columns from children
   for (let i = 0; i < props.children.length; i++) {
     const columnIndex = i % props.columns;
     columnWrapper[`column_${columnIndex}`].push(
@@ -17,6 +18,7 @@ const MasonryGrid = (props) => {
     );
   }
 
+  // push final columns into result
   for (let i = 0; i < props.columns; i++) {
     result.push(
       <div
@@ -31,6 +33,7 @@ const MasonryGrid = (props) => {
     );
   }
 
+  // return html with the result
   return <div style={{ display: "flex" }}>{result}</div>;
 };
 
@@ -39,6 +42,7 @@ MasonryGrid.propTypes = {
   columnGap: PropTypes.number.isRequired,
   children: PropTypes.arrayOf(PropTypes.element)
 };
+
 MasonryGrid.defaultProps = {
   columns: 2,
   columnGap: 20
